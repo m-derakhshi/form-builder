@@ -1,0 +1,39 @@
+{
+  "name": "mderakhshi/form-builder",
+  "description": "Custom PHP form builder library for the Laravel 6",
+  "version": "dev-master",
+  "keywords": [
+    "masoud_derakhshi",
+    "mderakhshi",
+    "Laravel",
+    "curl"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Masoud Derakhshi",
+      "email": "mderakhshi1922@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "ext-http": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "mderakhshi\\formBuilder\\": "src/"
+    },
+    "files": [
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "mderakhshi\\formBuilder\\formServiceProvider"
+      ],
+      "aliases": {
+        "formBuilder": "mderakhshi\\formBuilder\\Facades\\Form"
+      }
+    }
+  }
+}
