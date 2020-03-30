@@ -3,7 +3,6 @@
 namespace mderakhshi\formBuilder;
 
 
-use http\Exception\BadMethodCallException;
 
 class formService {
 	private array  $forms;
@@ -20,7 +19,7 @@ class formService {
 	public function build(array $property)
 	{
 		if (!array_key_exists('name', $property)) {
-			throw new BadMethodCallException('the form builder class haven\'t property name.', '400');
+			throw new \Exception('the form builder class haven\'t property name.', '400');
 		}
 		$this->lastForm               = $property['name'];
 		$this->forms[$this->lastForm] = (array)$property['property'] ?? [];
